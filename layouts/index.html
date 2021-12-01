@@ -1,6 +1,14 @@
 {{ define "main" }}
 <main>
 
+	<img src="img/computer.jpg">
+
+	<div id="about">
+		<h1>About us</h1>
+		{{ .Content }}
+	</div>
+	<hr>
+
 	<div id="events">
 		<h1>Events</h1>
 		{{ range where .Site.RegularPages "Type" "in" "events" }}
