@@ -1,0 +1,27 @@
+<aside>
+	<hr>
+	<div class="latest_events">
+		<div>
+			<h3>LATEST EVENTS</h3>
+		</div>
+		<div>
+			<ul>
+				{{ range first 5 (where .Site.RegularPages "Type" "in" "events") }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+	<div class="latest_posts">
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				{{ range first 5 (where .Site.RegularPages "Type" "in" "posts") }}
+				<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>
+</aside>

@@ -1,11 +1,29 @@
-<!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
-        Hello
-        </div>
-        {{- partial "footer.html" . -}}
-    </body>
-</html>
+{{ define "main" }}
+<main>
+
+	<h1>Events</h1>
+	<div class="events_list">
+		{{ range where .Site.RegularPages "Type" "in" "events" }}
+		{{ .Render "summary" }}
+		{{ end }}
+	</div>
+	<hr>
+
+	<h1>Posts</h1>
+	<div class="posts_list">
+		{{ range where .Site.RegularPages "Type" "in" "posts" }}
+		{{ .Render "summary" }}
+		{{ end }}
+	</div>
+	<hr>
+
+	<h1>Projects</h1>
+	<div class="projects_list">
+		{{ range where .Site.RegularPages "Type" "in" "projects" }}
+		{{ .Render "summary" }}
+		{{ end }}
+	</div>
+	<hr>
+
+</main>
+{{ end }}

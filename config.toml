@@ -1,3 +1,21 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://pvcc.codes/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'PVCC Codes'
+[params]
+    author = 'PVCC Programming Club'
+    summaryTruncateLength = 150
+    truncateFlag = "--!!TRUNCATED!!--"
+
+[menu]
+[[menu.main]]
+    name = 'Posts'
+    url = '#Posts'
+    weight = 1
+[[menu.main]]
+    name = 'Events'
+    url = '#Events'
+    weight = 2
+[[menu.main]]
+    name = 'Projects'
+    url = '#Projects'
+    weight = 3
