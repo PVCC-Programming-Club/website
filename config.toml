@@ -1,4 +1,4 @@
-baseURL = 'http://pvcc.codes/'
+baseURL = 'https://pvcc-programming-club.github.io/'
 languageCode = 'en-us'
 title = 'PVCC Codes'
 uglyurls = true
