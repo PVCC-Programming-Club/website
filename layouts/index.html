@@ -1,24 +1,32 @@
 {{ define "main" }}
 <main>
 
-	<h1>Events</h1>
-	<div class="events_list">
+	<img src="img/computer.jpg">
+
+	<div id="about">
+		<h1>About us</h1>
+		{{ .Content }}
+	</div>
+	<hr>
+
+	<div id="events">
+		<h1>Events</h1>
 		{{ range where .Site.RegularPages "Type" "in" "events" }}
 		{{ .Render "summary" }}
 		{{ end }}
 	</div>
 	<hr>
 
-	<h1>Posts</h1>
-	<div class="posts_list">
+	<div id="posts">
+		<h1>Posts</h1>
 		{{ range where .Site.RegularPages "Type" "in" "posts" }}
 		{{ .Render "summary" }}
 		{{ end }}
 	</div>
 	<hr>
 
-	<h1>Projects</h1>
-	<div class="projects_list">
+	<div id="projects">
+		<h1>Projects</h1>
 		{{ range where .Site.RegularPages "Type" "in" "projects" }}
 		{{ .Render "summary" }}
 		{{ end }}
