@@ -9,7 +9,8 @@
 	<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+	{{ $style := (resources.Get "scss/style.scss") | resources.ToCSS }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 
 <body>

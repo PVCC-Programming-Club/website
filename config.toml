@@ -1,6 +1,7 @@
 baseURL = 'http://pvcc.codes/'
 languageCode = 'en-us'
 title = 'PVCC Codes'
+uglyurls = true
 [params]
     author = 'PVCC Programming Club'
     summaryTruncateLength = 150
@@ -8,14 +9,14 @@ title = 'PVCC Codes'
 
 [menu]
 [[menu.main]]
-    name = 'Posts'
-    url = '#Posts'
+    name = 'Events'
+    url = '#events'
     weight = 1
 [[menu.main]]
-    name = 'Events'
-    url = '#Events'
+    name = 'Posts'
+    url = '#posts'
     weight = 2
 [[menu.main]]
     name = 'Projects'
-    url = '#Projects'
+    url = '#projects'
     weight = 3
